@@ -1,1 +1,2 @@
 /.idea/
+docker/fluentd/conf/fluentd.conf
