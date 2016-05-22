@@ -4,7 +4,7 @@ RDS→Fluentd→ElasticSearch→Kibana
 
 [RDS](https://aws.amazon.com/jp/rds/)
 
-[fluent-plugin-rds-slowlog](https://github.com/kenjiskywalker/fluent-plugin-rds-slowlog)
+[fluent-plugin-rds-log](https://github.com/shinsaka/fluent-plugin-rds-log)
 
 ```
 cp docker/fluentd/conf/fluentd.conf.sample docker/fluentd/conf/fluentd.conf
