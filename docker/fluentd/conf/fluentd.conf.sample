@@ -1,0 +1,19 @@
+<source>
+  type rds_slowlog
+  tag rds.slow_query
+  host ****************************.***********.rds.amazonaws.com
+  username username
+  password password
+</source>
+
+<match rds.slow_query>
+  type elasticsearch
+  include_tag_key true
+  host "192.168.99.100"
+  port "9200"
+  type_name rds_slow_query
+  logstash_format true
+  logstash_prefix slow_query
+  logstash_dateformat %Y%m
+  flush_interval 10s
+</match>
