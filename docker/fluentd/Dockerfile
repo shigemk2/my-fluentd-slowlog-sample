@@ -8,7 +8,7 @@ RUN apk-install ca-certificates ruby-dev build-base jemalloc-dev mysql-dev && \
   gem update --system && \
   gem install fluentd -v $FLUENTD_VERSION && \
   gem install fluent-plugin-elasticsearch && \
-  gem install fluent-plugin-rds-slowlog && \
+  gem install fluent-plugin-rds-log && \
   fluentd --setup /etc/fluent
 
 ENV JEMALLOC_PATH /usr/lib/libjemalloc.so

@@ -4,6 +4,8 @@
   host ****************************.***********.rds.amazonaws.com
   username username
   password password
+  add_host false
+  refresh_interval 5
 </source>
 
 <match rds.slow_query>
