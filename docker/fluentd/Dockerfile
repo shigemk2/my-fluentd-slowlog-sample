@@ -3,14 +3,7 @@ MAINTAINER i.am.shige@gmail.com
 
 ENV FLUENTD_VERSION 0.14.0.pre.1
 
-RUN apk --no-cache --update add \
-                            build-base \
-                            ca-certificates \
-                            ruby \
-                            ruby-irb \
-                            ruby-dev \
-                            mariadb-dev \
-                            bash gawk sed grep bc coreutils && \
+RUN apk-install ca-certificates ruby ruby-dev ruby-irb build-base jemalloc-dev mariadb-dev && \
   echo 'gem: --no-document' >> /etc/gemrc && \
   gem update --system && \
   gem install fluentd -v $FLUENTD_VERSION && \
